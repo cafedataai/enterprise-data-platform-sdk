@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "enterprise-data-platform-sdk"
+version = "0.1.0"
+description = "Production-grade, metadata-driven, vendor-agnostic Python SDK for building modern Enterprise Data & AI platforms."
+authors = ["Anit Chakkarwar"]
+license = "Apache-2.0"
+readme = "README.md"
+
+packages = [
+    { include = "enterprise_data_platform", from = "src" }
+]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.4.0"
+ruff = "^0.12.0"
+mypy = "^1.17.0"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
